@@ -15,12 +15,12 @@
   </head>
 
   <body>
-    <div class="container">
       <%= render 'layouts/navbar' %>
-      <%= render 'layouts/flash_messages' %>
+      <div class="container">
+        <%= render 'layouts/flash_messages' %>
       
-      <%= yield %>
-    </div>
+        <%= yield %>
+      </div>
 
   </body>
 </html>
