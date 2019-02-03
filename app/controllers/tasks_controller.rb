@@ -7,9 +7,19 @@ class TasksController < ApplicationController
   end
   
   def show
+    if @task.user == current_user
+      render :show
+    else
+      redirect_to root_url
+    end
   end
   
   def edit
+    if @task.user == current_user
+      render :edit
+    else
+      redirect_to root_url
+    end
   end
 
   def update
